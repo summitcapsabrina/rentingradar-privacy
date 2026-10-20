@@ -28,9 +28,10 @@ footer{text-align:center;padding:24px;font-size:.8rem;color:#9399b2;border-top:1
 <p>Chrome Extension</p>
 </header>
 <main>
-<p class="effective">Effective date: March 19, 2026</p>
+<p class="effective">Effective date: October 20, 2026</p>
 
 <h2>Overview</h2>
+<p>RentingRadar is operated by Summit Capital LLC, a Nevada limited liability company ("Summit Capital," "we," "us," or "our"). This policy covers the RentingRadar Importer Chrome extension only. How the RentingRadar app handles your account and property data is described in the main <a href="https://rentingradar.com/privacy">RentingRadar Privacy Policy</a>.</p>
 <p>RentingRadar Importer ("the Extension") is a Chrome browser extension that helps users import rental property data from listing websites into the RentingRadar CRM application. We are committed to protecting your privacy. This policy explains what data the Extension accesses, how it is used, and how it is stored.</p>
 
 <h2>Data We Access</h2>
@@ -39,7 +40,7 @@ footer{text-align:center;padding:24px;font-size:.8rem;color:#9399b2;border-top:1
 <h2>Data We Do NOT Collect</h2>
 <p>The Extension does not collect, store, or transmit any of the following:</p>
 <ul>
-<li>Personally identifiable information (names, email addresses, phone numbers)</li>
+<li>Personal information about you, such as your name, email address, or phone number</li>
 <li>Health, financial, or authentication information</li>
 <li>Browsing history or web activity</li>
 <li>Location data</li>
@@ -48,18 +49,20 @@ footer{text-align:center;padding:24px;font-size:.8rem;color:#9399b2;border-top:1
 </ul>
 
 <h2>How Data Is Processed</h2>
-<p>When you request an import, the Extension fetches the listing page HTML and extracts property data using one of two methods:</p>
+<p>When you request an import, the Extension fetches the listing page and extracts property data using one or more of these methods:</p>
 <ul>
-<li><strong>Built-in pattern matching:</strong> Regex-based extraction that runs entirely within the Extension. No data leaves your browser.</li>
-<li><strong>Local AI processing (optional):</strong> If you have Ollama installed on your computer, the Extension may send the listing text to your local Ollama instance (localhost) for AI-powered extraction. This communication never leaves your machine — Ollama runs entirely on your own computer.</li>
+<li><strong>Built-in pattern matching:</strong> Extraction that runs entirely within the Extension. No data leaves your browser.</li>
+<li><strong>RentingRadar AI:</strong> While you are signed in to RentingRadar, the listing text is sent through RentingRadar's servers (Google Cloud) to Anthropic's Claude API, which returns the property details.</li>
+<li><strong>Your own Claude API key (optional):</strong> If you enter a Claude API key in the Extension, it may send the listing text directly to Anthropic's Claude API using your key.</li>
+<li><strong>Local AI processing (optional):</strong> If you run Ollama on your computer, the Extension may send the listing text to your local Ollama instance (localhost). That communication never leaves your machine.</li>
 </ul>
-<p>In both cases, all processing happens locally. No listing data, extracted property details, or any other information is sent to external servers, third-party services, or cloud APIs.</p>
+<p>Anthropic processes the listing text under its <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>. Only the content of the listing page you chose is sent, not your browsing history or other pages.</p>
 
 <h2>Data Storage</h2>
-<p>The Extension itself does not store any data. Extracted property information is passed directly to the RentingRadar CRM application running in your browser, where it is saved to your browser's local storage. This data remains on your computer and is never transmitted externally.</p>
+<p>The Extension does not keep the listing data. It passes the extracted property details to the RentingRadar app, which saves them to your RentingRadar account (stored with Google Firebase), as described in the <a href="https://rentingradar.com/privacy">RentingRadar Privacy Policy</a>. If you enter a Claude API key, the Extension stores it in Chrome's extension storage.</p>
 
 <h2>Third-Party Services</h2>
-<p>The Extension does not integrate with, send data to, or receive data from any third-party analytics, advertising, or tracking services.</p>
+<p>The Extension does not use any analytics, advertising, or tracking services. The only outside services it contacts are RentingRadar, Anthropic (for AI extraction, as described above), and the listing pages you choose to import.</p>
 
 <h2>Permissions</h2>
 <p>The Extension requests the <strong>"all URLs"</strong> host permission. This is required so the Extension can fetch rental listing pages from any website when you explicitly request an import. The Extension does not access any web pages in the background or without your direct action.</p>
@@ -68,16 +71,19 @@ footer{text-align:center;padding:24px;font-size:.8rem;color:#9399b2;border-top:1
 <p>We do not sell, transfer, or share any user data with third parties for any purpose. No data is used for advertising, analytics, creditworthiness assessment, or any purpose unrelated to the Extension's core function of importing rental property data.</p>
 
 <h2>Children's Privacy</h2>
-<p>The Extension is not directed at children under the age of 13 and does not knowingly collect any personal information from children.</p>
+<p>The Extension is not intended for anyone under 18 and does not knowingly collect personal information from anyone under 18.</p>
 
 <h2>Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. Continued use of the Extension after changes constitutes acceptance of the updated policy.</p>
 
 <h2>Contact</h2>
 <div class="contact">
-<p>If you have any questions about this Privacy Policy, please contact us at <strong>sabrina@summitcapllc.com</strong>.</p>
+<p>If you have any questions about this Privacy Policy, please contact us at:<br>
+Summit Capital LLC (RentingRadar)<br>
+<a href="mailto:help@rentingradar.com">help@rentingradar.com</a><br>
+Mailing address: 1050 E Flamingo Rd, Ste 107 PMB 1387, Las Vegas, NV 89119</p>
 </div>
 </main>
-<footer>&copy; 2026 RentingRadar. All rights reserved.</footer>
+<footer>&copy; 2026 Summit Capital LLC. All rights reserved. RentingRadar is a trademark of Summit Capital LLC.</footer>
 </body>
 </html>
